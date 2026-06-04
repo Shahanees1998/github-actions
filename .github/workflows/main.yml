@@ -1,12 +1,12 @@
-name: AneesDev
+name: force-test
 
 on:
-  push: 
-      branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  demo:
-    runs-on: ububuntu-latest  
+  test:
+    runs-on: ubuntu-latest
     steps:
-      - name: Greetings
-        run: echo "hellow world"
+      - run: echo "test 1"
+      - run: sleep 10
+      - run: echo "test 2"
